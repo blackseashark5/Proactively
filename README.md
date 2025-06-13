@@ -11,7 +11,7 @@ ProVital is a comprehensive healthcare platform that focuses on the six pillars 
 [🌐 **Live Demo**](https://startling-twilight-db7f5b.netlify.app/)
 
 ---
-[🌐 **APP LINK**](https://startling-twilight-db7f5b.netlify.app/)
+[🌐 **APP LINK**](https://drive.google.com/file/d/1AABphNq4P6YlJuO-no4zc4-NZOTXbcFD/view?usp=drive_link)
 
 
 ## ✨ Features Implemented
