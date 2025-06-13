@@ -1,0 +1,258 @@
+.pillars {
+  padding: var(--spacing-3xl) 0;
+  
+  &__container {
+    text-align: center;
+  }
+  
+  &__title {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-xs);
+    color: var(--text-light);
+    font-weight: 400;
+    
+    @media (min-width: 768px) {
+      font-size: 1.75rem;
+    }
+  }
+  
+  &__subtitle {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-2xl);
+    color: var(--text-dark);
+    font-weight: 600;
+    
+    @media (min-width: 768px) {
+      font-size: 2.5rem;
+    }
+    
+    .highlight {
+      color: var(--primary-orange);
+    }
+  }
+  
+  &__tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-2xl);
+    
+    @media (min-width: 768px) {
+      gap: var(--spacing-md);
+    }
+  }
+  
+  &__tab {
+    background: none;
+    border: 1px solid var(--border-light);
+    border-radius: 25px;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    cursor: pointer;
+    transition: var(--transition);
+    white-space: nowrap;
+    
+    @media (min-width: 768px) {
+      padding: var(--spacing-md) var(--spacing-xl);
+      font-size: 1rem;
+    }
+    
+    &:hover {
+      border-color: var(--primary-teal);
+      color: var(--primary-teal);
+      transform: scale(1.02);
+    }
+    
+    &.active {
+      background-color: var(--text-dark);
+      border-color: var(--text-dark);
+      color: var(--white);
+      transform: scale(1.02);
+    }
+  }
+  
+  &__content {
+    position: relative;
+  }
+  
+  &__cards {
+    display: grid;
+    gap: var(--spacing-lg);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    &.active {
+      opacity: 1;
+      transform: translateY(0);
+      animation: fadeInUp 0.3s ease;
+    }
+  }
+  
+  &__card {
+    background-color: var(--white);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    
+    &:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: var(--shadow-lg);
+    }
+  }
+  
+  &__card-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    &:hover img {
+      transform: scale(1.05);
+    }
+  }
+  
+  &__card-badge {
+    position: absolute;
+    top: var(--spacing-md);
+    left: var(--spacing-md);
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    backdrop-filter: blur(10px);
+    
+    &--nutrition {
+      color: var(--success-green);
+    }
+    
+    &--activity {
+      color: var(--primary-orange);
+    }
+    
+    &--sleep {
+      color: var(--primary-teal);
+    }
+    
+    &--stress {
+      color: #9F7AEA;
+    }
+    
+    &--social {
+      color: #ED8936;
+    }
+    
+    &--substance {
+      color: #38B2AC;
+    }
+  }
+  
+  &__card-content {
+    padding: var(--spacing-lg);
+  }
+  
+  &__card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-dark);
+  }
+  
+  &__card-description {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  &__navigation {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-xl);
+    
+    @media (min-width: 1024px) {
+      justify-content: flex-end;
+    }
+  }
+  
+  &__nav-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--border-light);
+    border-radius: 50%;
+    background-color: var(--white);
+    cursor: pointer;
+    transition: var(--transition);
+    
+    &:hover:not(:disabled) {
+      border-color: var(--primary-teal);
+      background-color: var(--primary-teal);
+      color: var(--white);
+      transform: scale(1.02);
+    }
+    
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+// Animation for card transitions
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.pillars__cards.entering {
+  animation: fadeInUp 0.3s ease forwards;
+}
