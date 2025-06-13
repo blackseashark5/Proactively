@@ -8,6 +8,12 @@ A modern, responsive landing page for ProVital, a lifestyle medicine platform th
 
 ProVital is a comprehensive healthcare platform that focuses on the six pillars of lifestyle medicine: nutrition, physical activity, restorative sleep, stress management, social connection, and substance abuse prevention. This landing page showcases these pillars through an interactive, accessible, and performance-optimized web experience.
 
+[🌐 **Live Demo**](https://startling-twilight-db7f5b.netlify.app/)
+
+---
+[🌐 **APP LINK**](https://startling-twilight-db7f5b.netlify.app/)
+
+
 ## ✨ Features Implemented
 
 ### 🎯 Core Requirements (Figma 1:1 Implementation)
@@ -282,4 +288,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Built with ❤️ using React, TypeScript, and SCSS**
 
-For questions or support, please open an issue or contact the development team.
+For questions or support, please contact rs4103@srmist.edu.in.
